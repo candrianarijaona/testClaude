@@ -45,10 +45,18 @@ class OrdinateurController extends AbstractController
     }
 
     #[Route('/nos-pcs/edit/{id}', name: 'app_ordinateur_edit', methods: ['GET', 'POST'])]
-    public function edit(Ordinateur $ordinateur): Response
+    public function edit(Ordinateur $ordinateur, Request $request): Response
     {
+        $form = $this->createForm(OrdinateurType::class, $ordinateur);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->entityManager->persist($ordinateur);
+            $this->entityManager->flush();
+            return $this->redirectToRoute('app_ordinateur');
+        }
+
         return $this->render('ordinateur/edit.html.twig', [
-            'ordinateur' => $ordinateur,
+            'form' => $form->createView(),
         ]);
     }
 

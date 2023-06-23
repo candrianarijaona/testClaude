@@ -9,13 +9,12 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Edition d'un ordinateur</h1>
-    <a href="{{ path('app_ordinateur') }}">Liste</a>
-
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button type="submit" class="btn btn-success">Modifier</button>
-    {{ form_end(form) }}
-    <a href="{{ path('app_ordinateur') }}">Annuler</a>
+    <h1>Detail de l'ordinateur</h1>
+    <a href="{{ path('app_ordinateur') }}">Liste des ordinateurs</a>
+    <p>Id : {{ ordinateur.id }}</p>
+    <p>Nom : {{ ordinateur.nom }}</p>
+    <p>Tour : {{ ordinateur.tour }}</p>
+    <p>Clavier : {{ ordinateur.clavier }}</p>
+    <p>Souris : {{ ordinateur.souris }}</p>
 </div>
 {% endblock %}
