@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b78b5ce3-16f8-4c28-ac08-0b82d367a391" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/Api/WeatherController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/Weather.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/OrdinateurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OrdinateurController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ordinateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ordinateur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ordinateur/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ordinateur/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +42,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/ordinateur" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller/Api" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Controller/Api" />
       <recent name="$PROJECT_DIR$/templates/ordinateur" />
     </key>
   </component>
@@ -57,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687509831697</updated>
-      <workItem from="1687509832732" duration="11771000" />
+      <workItem from="1687509832732" duration="12770000" />
     </task>
     <servers />
   </component>
