@@ -28,7 +28,7 @@
             <tr>
                 <td>{{ ordinateur.nom }}</td>
                 <td>{{ ordinateur.statut }}</td>
-                <td>{% for ecran in ordinateur.ecrans %}{{ ecran.nom }} {% endfor %}</td>
+                <td>{% for ecran in ordinateur.ecrans %}{{ ecran }} {% endfor %}</td>
                 <td>{{ ordinateur.souris.nom }}</td>
                 <td>{{ ordinateur.tour.nom }}</td>
                 <td>{{ ordinateur.clavier.nom }}</td>

@@ -24,9 +24,6 @@ class Ordinateur
     #[ORM\Column]
     private bool $statut = true;
 
-    #[ORM\ManyToMany(targetEntity: Ecran::class, mappedBy: 'ordinateur')]
-    private Collection $ecrans;
-
     #[ORM\ManyToOne(cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Souris $souris = null;
@@ -38,6 +35,9 @@ class Ordinateur
     #[ORM\ManyToOne(cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Clavier $clavier = null;
+
+    #[ORM\ManyToMany(targetEntity: Ecran::class, inversedBy: 'ordinateur')]
+    private Collection $ecrans;
 
     public function __construct()
     {
@@ -71,36 +71,6 @@ class Ordinateur
     public function setStatut(bool $statut): static
     {
         $this->statut = $statut;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Ecran>
-     */
-    public function getEcrans(): Collection
-    {
-        return $this->ecrans;
-    }
-
-    public function addEcran(Ecran $ecran): static
-    {
-        if (!$this->ecrans->contains($ecran)) {
-            $this->ecrans->add($ecran);
-            $ecran->setOrdinateur($this);
-        }
-
-        return $this;
-    }
-
-    public function removeEcran(Ecran $ecran): static
-    {
-        if ($this->ecrans->removeElement($ecran)) {
-            // set the owning side to null (unless already changed)
-            if ($ecran->getOrdinateur() === $this) {
-                $ecran->setOrdinateur(null);
-            }
-        }
 
         return $this;
     }
@@ -144,5 +114,29 @@ class Ordinateur
     public function __toString(): string
     {
         return $this->nom;
+    }
+
+    /**
+     * @return Collection<int, Ecran>
+     */
+    public function getEcrans(): Collection
+    {
+        return $this->ecrans;
+    }
+
+    public function addEcran(Ecran $ecran): static
+    {
+        if (!$this->ecrans->contains($ecran)) {
+            $this->ecrans->add($ecran);
+        }
+
+        return $this;
+    }
+
+    public function removeEcran(Ecran $ecran): static
+    {
+        $this->ecrans->removeElement($ecran);
+
+        return $this;
     }
 }

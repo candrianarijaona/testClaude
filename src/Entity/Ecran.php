@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\EcranRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
 
@@ -26,10 +28,14 @@ class Ecran
     #[ORM\ManyToOne(inversedBy: 'ecrans')]
     private ?Ordinateur $ordinateur = null;
 
+    #[ORM\ManyToMany(targetEntity: Ordinateur::class, mappedBy: 'ecrans')]
+    private Collection $yes;
+
     public function __construct()
     {
         $this->createdAt = new \DateTime();
         $this->updatedAt = new \DateTime();
+        $this->yes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -77,4 +83,5 @@ class Ecran
     {
         return $this->getMarqueEcran()->getNom() . ' ' . $this->getTaille() . '"';
     }
+
 }
