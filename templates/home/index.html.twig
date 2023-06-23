@@ -9,7 +9,7 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>« Il fait {température}°C ({description météo}) chez Citeo. »</h1>
+    <h1>« Il fait {{ data.main.temp }}°C ({{ data.weather[0].description }}) chez Citeo. »</h1>
     <a href="{{ path('app_ordinateur') }}"><button>Liste des ordinateurs</button></a>
 </div>
 {% endblock %}
