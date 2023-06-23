@@ -24,15 +24,15 @@ class Ordinateur
     #[ORM\Column]
     private bool $statut = true;
 
-    #[ORM\ManyToOne(cascade: ['persist', 'remove'])]
+    #[ORM\ManyToOne(cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Souris $souris = null;
 
-    #[ORM\ManyToOne(cascade: ['persist', 'remove'])]
+    #[ORM\ManyToOne(cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Tour $tour = null;
 
-    #[ORM\ManyToOne(cascade: ['persist', 'remove'])]
+    #[ORM\ManyToOne(cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Clavier $clavier = null;
 

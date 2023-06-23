@@ -33,8 +33,11 @@
                 <td>{{ ordinateur.tour.nom }}</td>
                 <td>{{ ordinateur.clavier.nom }}</td>
                 <td>
-                    <a href="{{ path('app_ordinateur_detail', {'id': ordinateur.id}) }}">show</a>
-                    <a href="{{ path('app_ordinateur_edit', {'id': ordinateur.id}) }}">edit</a>
+                    <a href="{{ path('app_ordinateur_detail', {'id': ordinateur.id}) }}">Afficher</a>
+                    <a href="{{ path('app_ordinateur_edit', {'id': ordinateur.id}) }}">Editer</a>
+                    <form action="{{ path('app_ordinateur_delete', {'id': ordinateur.id}) }}" method="post">
+                        <input type="submit" value="Supprimer">
+                    </form>
                 </td>
             </tr>
             {% else %}

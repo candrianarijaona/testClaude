@@ -59,4 +59,12 @@ class OrdinateurController extends AbstractController
             'ordinateur' => $ordinateur,
         ]);
     }
+
+    #[Route('/nos-pcs/remove/{id}', name: 'app_ordinateur_delete', methods: ['DELETE', 'POST'])]
+    public function delete(Ordinateur $ordinateur): Response
+    {
+        $this->entityManager->remove($ordinateur);
+        $this->entityManager->flush();
+        return $this->redirectToRoute('app_ordinateur');
+    }
 }
