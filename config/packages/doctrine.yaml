@@ -13,6 +13,12 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
         mappings:
+            translatable:
+                type: annotation # or attribute
+                alias: Gedmo
+                prefix: Gedmo\Translatable\Entity
+                # make sure vendor library location is correct
+                dir: "%kernel.project_dir%/vendor/gedmo/doctrine-extensions/src/Translatable/Entity"
             App:
                 is_bundle: false
                 dir: '%kernel.project_dir%/src/Entity'

@@ -2,18 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b78b5ce3-16f8-4c28-ac08-0b82d367a391" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/ordinateur/add.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ordinateur/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.override.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Clavier.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Clavier.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Ecran.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ecran.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/MarqueEcran.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/MarqueEcran.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Ordinateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ordinateur.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Souris.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Souris.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Tour.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tour.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/OrdinateurRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/OrdinateurRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,9 +55,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/ordinateur" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/ordinateur" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -61,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687509831697</updated>
-      <workItem from="1687509832732" duration="5847000" />
+      <workItem from="1687509832732" duration="10292000" />
     </task>
     <servers />
   </component>

@@ -39,28 +39,18 @@ class OrdinateurRepository extends ServiceEntityRepository
         }
     }
 
-//    /**
-//     * @return Ordinateur[] Returns an array of Ordinateur objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('o')
-//            ->andWhere('o.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('o.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
 
-//    public function findOneBySomeField($value): ?Ordinateur
-//    {
-//        return $this->createQueryBuilder('o')
-//            ->andWhere('o.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+    public function getLast15minutes()
+    {
+        $date = new \DateTime();
+        $date->modify('-15 minutes');
+        $date = $date->format('Y-m-d H:i:s');
+
+        return $this->createQueryBuilder('o')
+            ->andWhere('o.createdAt > :date')
+            ->setParameter('date', $date)
+            ->orderBy('o.createdAt', 'DESC')
+            ->getQuery()
+            ->getResult();
+    }
 }

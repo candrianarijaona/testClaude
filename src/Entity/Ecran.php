@@ -26,6 +26,12 @@ class Ecran
     #[ORM\ManyToOne(inversedBy: 'ecrans')]
     private ?Ordinateur $ordinateur = null;
 
+    public function __construct()
+    {
+        $this->createdAt = new \DateTime();
+        $this->updatedAt = new \DateTime();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -65,5 +71,10 @@ class Ecran
         $this->ordinateur = $ordinateur;
 
         return $this;
+    }
+
+    public function __toString(): string
+    {
+        return $this->getMarqueEcran()->getNom() . ' ' . $this->getTaille() . '"';
     }
 }

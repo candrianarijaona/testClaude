@@ -27,6 +27,8 @@ class MarqueEcran
     public function __construct()
     {
         $this->ecrans = new ArrayCollection();
+        $this->createdAt = new \DateTime();
+        $this->updatedAt = new \DateTime();
     }
 
     public function getId(): ?int
@@ -74,5 +76,10 @@ class MarqueEcran
         }
 
         return $this;
+    }
+
+    public function __toString(): string
+    {
+        return $this->nom;
     }
 }

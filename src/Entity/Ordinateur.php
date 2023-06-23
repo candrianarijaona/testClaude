@@ -24,24 +24,26 @@ class Ordinateur
     #[ORM\Column]
     private bool $statut = true;
 
-    #[ORM\OneToMany(mappedBy: 'ordinateur', targetEntity: Ecran::class)]
+    #[ORM\ManyToMany(targetEntity: Ecran::class, mappedBy: 'ordinateur')]
     private Collection $ecrans;
 
-    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\ManyToOne(cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Souris $souris = null;
 
-    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\ManyToOne(cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Tour $tour = null;
 
-    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\ManyToOne(cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Clavier $clavier = null;
 
     public function __construct()
     {
         $this->ecrans = new ArrayCollection();
+        $this->createdAt = new \DateTime();
+        $this->updatedAt = new \DateTime();
     }
 
     public function getId(): ?int
@@ -137,5 +139,10 @@ class Ordinateur
         $this->clavier = $clavier;
 
         return $this;
+    }
+
+    public function __toString(): string
+    {
+        return $this->nom;
     }
 }
